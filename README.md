@@ -5,12 +5,12 @@ A Golang implement cuckoofilte  better than counting bloomfilter  -with delete f
 ## Donate us:
 AliPay: <img src="images/alipay.png" alt="alipay" width="200" height="200">
 
-## 先说作用与进化
+## 经典应用案例
 * 如果有1亿的url 抓取的时候怎么知道url是否已经抓取过了呢？ 您应该想到用 floom filter 来把每个url 映射到一个位， 这样来快速定位是否抓取过了。
 * 但是bloom filter 缺点是不能删除，所以有了增强版Counting bloom filter的实现可删除操作
 * 在发展下来Counting bloom filter 占用空间太大是3,4倍bf的空间占有率，所以发展出来 双Hash 函数对来实现的 Cuckoo Filter (布谷鸟 BF算法，完美在应用中应用到大数据量的去重操作)
 
-## 如果使用
+## test 
 ```
 $cd cukoofilter
 $go test -v
